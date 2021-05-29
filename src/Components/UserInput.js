@@ -52,7 +52,7 @@ function UserInput(props) {
 
   return (
     <div>
-      <form>
+      <form> 
         <input
           type="text"
           placeholder="Enter stock's name"
