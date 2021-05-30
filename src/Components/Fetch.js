@@ -14,7 +14,7 @@ function Fetch() {
     fetch(
       "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=" +
         name +
-        "&apikey=HIOOYZ15LELZLW0A"
+        "&apikey=***********"
     )
       .then((response) => {
         return response.json();
