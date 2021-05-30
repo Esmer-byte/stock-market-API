@@ -1,11 +1,8 @@
-import * as ReactBootStrap from "react";
-import { render } from "@testing-library/react";
 import { useState } from "react/cjs/react.development";
 import Chart from "./Chart";
 
 function Fetch() {
   const [prices, setPrices] = useState([""]);
-  const [loading, setLoading] = useState([false]);
   let name, mainPrices = [], pricing = [];
   function onChangeHandler(event) {
     name = event.target.value;
@@ -13,7 +10,7 @@ function Fetch() {
 
   function onClickHandler(event) {
     event.preventDefault();
-    setLoading(true);
+    
     fetch(
       "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=" +
         name +
@@ -34,7 +31,6 @@ function Fetch() {
           }
           year++;
         }
-        console.log(mainPrices);
       })
       .catch((err) => {
         if (mainPrices.length < 4) {
