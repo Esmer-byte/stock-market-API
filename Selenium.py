@@ -10,7 +10,7 @@ driver.get("http://localhost:3001/")
 maximum = 0
 
 
-def myFunction(str):
+def Search(str):
     global maximum
     search = driver.find_element_by_name("input")
     search.send_keys(str)
@@ -26,10 +26,10 @@ def myFunction(str):
         maximum = float(main.text)
 
 
-myFunction("TSLA")
-myFunction("IBM")
-myFunction("FB")
-myFunction("AMZN")
+Search("TSLA")
+Search("IBM")
+Search("FB")
+Search("AMZN")
 
 print(maximum)
 time.sleep(2)
